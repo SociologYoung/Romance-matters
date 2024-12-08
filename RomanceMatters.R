@@ -119,4 +119,4 @@ stergm_model <- function(network_list, form_terms, dissolve_terms) {
 model <- stergm_model(list(ft2, ft3), ~edges + mutual + gwesp(decay = 0.25, fixed = TRUE) + gwdsp(decay = 0.25, fixed = TRUE), 
                        ~edges + mutual + gwesp(decay = 0.25, fixed = TRUE) + gwdsp(decay = 0.25, fixed = TRUE))
 
-summary(model1)
+summary(model)
