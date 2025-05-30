@@ -16,6 +16,7 @@ This repository contains comprehensive R scripts for analyzing **adolescent frie
 ### 🔬 Research Question
 *How do romantic relationships affect the beginnings and endings of adolescent friendships?*
 
+
 ---
 
 ## ✨ Key Features
@@ -62,21 +63,46 @@ install.packages(required_packages)
 
 ---
 
-## 📁 Data Structure
+## 📁 Data Source
 
-The analysis requires the following input files:
+This analysis uses the **Glasgow Teenage Friends and Lifestyle Study** dataset, which is publicly available and widely used in social network research.
+
+### 🔗 **Data Access**
+📊 **Download the data**: [Glasgow Teenage Friends Dataset](https://www.stats.ox.ac.uk/~snijders/siena/Glasgow_data.htm)  
+*Hosted by the University of Oxford - Department of Statistics*
+
+### 📋 **Required Files**
+After downloading, you'll need these files for the analysis:
 
 ```
-📂 Data Files
+📂 Expected Data Files
 ├── 🔗 FriendshipNetwork_t1_binary.csv  # Friendship adjacency matrix (Time 1)
 ├── 🔗 FriendshipNetwork_t2_binary.csv  # Friendship adjacency matrix (Time 2)  
 ├── 🔗 FriendshipNetwork_t3_binary.csv  # Friendship adjacency matrix (Time 3)
 └── 👥 attribute_AgeSexRom_analysis.csv  # Individual attributes & romantic status
 ```
 
-### Data Format
-- **Network files**: Square adjacency matrices (CSV format, row names as IDs)
-- **Attribute file**: Individual-level data including age, gender, and romantic relationship status at each time point
+### 📊 **Dataset Information**
+- **Study**: Glasgow Teenage Friends and Lifestyle Study
+- **Participants**: 133 adolescents from a Scottish secondary school
+- **Time Points**: Three waves of data collection
+- **Variables**: Friendship networks, demographics, romantic relationships, and lifestyle factors
+- **Format**: CSV files with adjacency matrices and attribute data
+
+### 🔄 **Data Preparation**
+The R script automatically processes the downloaded data files - just ensure they're in your working directory with the expected filenames.
+
+### 🕸️ **Sample Network Visualization**
+<div align="center">
+  <img src="images/friendship_network_t3.png" alt="Friendship Network Subgroups" width="700">
+  <br>
+  <em><strong>Figure 1:</strong> Subgroups of Friendship Networks at the Last Time Point</em>
+  <br>
+  <small>Blue circles = Non-dating adolescents | Pink triangles = Dating adolescents<br>
+  Node size reflects in-degree (popularity in friendship nominations)</small>
+</div>
+
+*This visualization shows the type of network analysis possible with the Glasgow dataset using our analytical approach.*
 
 ---
 
@@ -88,18 +114,42 @@ git clone https://github.com/SociologYoung/Romance-matters.git
 cd Romance-matters
 ```
 
-2. **Set up your workspace**
+2. **Download the Glasgow dataset**
+   - Visit: https://www.stats.ox.ac.uk/~snijders/siena/Glasgow_data.htm
+   - Download the required friendship network and attribute files
+   - Place them in your project directory
+
+3. **Set up your workspace**
 ```r
 # Update the working directory path in the script
 setwd("path/to/your/Romance-matters/folder")
 ```
 
-3. **Run the analysis**
+4. **Run the analysis**
 ```r
 source("RomanceMatters.R")
 ```
 
 ---
+
+## 🎨 Network Visualizations
+
+Our analysis reveals fascinating patterns in adolescent friendship networks:
+
+<div align="center">
+  <img src="images/friendship_network_t3.png" alt="Network Subgroups Analysis" width="650">
+</div>
+
+### Key Visual Insights:
+- 🔵 **Blue circles**: Non-dating adolescents
+- 🔺 **Pink triangles**: Dating adolescents  
+- 📏 **Node size**: Proportional to in-degree (friendship popularity)
+- 🌐 **Network structure**: Clear subgroup formations with bridging connections
+
+The network visualization demonstrates how romantic status influences social positioning, with dating adolescents often serving as bridges between different friendship clusters.
+
+---
+
 
 ## 📊 Analysis Pipeline
 
@@ -198,9 +248,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- **Glasgow Teenage Friends and Lifestyle Study** - Original data collection team
+- **University of Oxford, Department of Statistics** - For making the data publicly available
 - Social network analysis community for methodological foundations
 - R development team and package maintainers
-- Study participants who made this research possible
 
 ---
 
