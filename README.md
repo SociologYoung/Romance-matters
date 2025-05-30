@@ -92,18 +92,6 @@ After downloading, you'll need these files for the analysis:
 ### 🔄 **Data Preparation**
 The R script automatically processes the downloaded data files - just ensure they're in your working directory with the expected filenames.
 
-### 🕸️ **Sample Network Visualization**
-<div align="center">
-  <img src="images/friendship_network_t3.png" alt="Friendship Network Subgroups" width="700">
-  <br>
-  <em><strong>Figure 1:</strong> Subgroups of Friendship Networks at the Last Time Point</em>
-  <br>
-  <small>Blue circles = Non-dating adolescents | Pink triangles = Dating adolescents<br>
-  Node size reflects in-degree (popularity in friendship nominations)</small>
-</div>
-
-*This visualization shows the type of network analysis possible with the Glasgow dataset using our analytical approach.*
-
 ---
 
 ## 🚀 Quick Start
