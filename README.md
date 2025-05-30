@@ -248,8 +248,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Glasgow Teenage Friends and Lifestyle Study** - Original data collection team
-- **University of Oxford, Department of Statistics** - For making the data publicly available
+- **Glasgow Teenage Friends and Lifestyle Study** - Original data collection team & For making the data publicly available
 - Social network analysis community for methodological foundations
 - R development team and package maintainers
 
